@@ -15,5 +15,5 @@ run `npm install` on the project directory to install all the necessary React pl
 after the installs you can simply type `npm run start` and this will start both ther server layer & the client layer. Now you are good to go. 
 
 #
-I provided t1o documents two CSV documents to start with
+I provided two documents two CSV documents to start with
 
