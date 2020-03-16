@@ -1,0 +1,22 @@
+.header-container {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+
+  .header-col {
+    padding: 0;
+  }
+}
+
+.main-container {
+  padding-top: 45px;
+  padding-bottom: 65px;
+
+
+  @media (min-width: 768px) {
+    padding-top: 132px;
+    &.has-sidebar {
+      padding-top: 101px;
+    }
+  }
+}
