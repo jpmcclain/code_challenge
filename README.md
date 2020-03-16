@@ -10,6 +10,8 @@ This will show you a step by step on how to make your own local MongoDB.
 
 `You can start where it says "Run MongoDB Community Edition from the Command Interpreter"`
 
+# You will need this mongoDB connection to upload the csv files. As I cannot afford to run my own mongoDB connection.
+
 After setting the the server and getting the project up. 
 run `npm install` on the project directory to install all the necessary React plugins.
 after the installs you can simply type `npm run start` and this will start both ther server layer & the client layer. Now you are good to go. 
