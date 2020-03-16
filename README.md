@@ -6,7 +6,7 @@ To start please download this entire project structure.
 You will also need to setup a local MongoDB server so you can host a connection for example this MongoDB connection uses:
 mongodb://localhost:27017/inventory (inventory is the collections name) the rect is the service connection.
 To make your own local MongoDB please go here and follow the steps: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
-This wil show you a step by step on how to make your own local MongoDB. 
+This will show you a step by step on how to make your own local MongoDB. 
 
 `You can start where it says "Run MongoDB Community Edition from the Command Interpreter"`
 
