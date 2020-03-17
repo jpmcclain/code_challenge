@@ -1,7 +1,7 @@
 # Code Challenge: React, Node & Mongo - Inventory
 Here I do a simple csv upload, search &amp; delete page
 
-To start please download this entire project structure.
+To start please download this entire project structure. Please have NodeJS installed.
 
 You will also need to setup a local MongoDB server so you can host a connection for example this app uses the MongoDB connection:
 mongodb://localhost:27017/inventory (inventory is the collections name) the rest is the service connection.
