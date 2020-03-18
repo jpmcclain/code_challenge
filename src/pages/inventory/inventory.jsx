@@ -288,25 +288,32 @@ function Inventory (props) {
                         <h2>Product Inventory</h2>
                     </div>
                         <form className="col-12 center">
-                            <div className="form-group col-2">
-                            </div>
-                            <div className="form-group col-7">
+                            <div className="form-group row">
                                 <input type="text" placeholder="Product" className="placement" name="Description" onChange={onInputChange}/>
                                 <input type="text" placeholder="Shelf Life" className="placement" name="ShelfLife" onChange={onInputChange}/>
                                 <input type="text" placeholder="Department" className="placement" name="Department" onChange={onInputChange}/>
                                 <input type="text" placeholder="Price" className="placement" name="Price" onChange={onInputChange}/>
                                 <input type="text" placeholder="Unit" className="placement" name="Unit" onChange={onInputChange}/>
                                 <button type="button" className="btn btn-primary btn-shift" onClick={onSearch}><span className="glyphicon glyphicon-search"/> Search</button>
-                                {/*Extra functonality for fun*/}
-                                {/*<button type="button" className="btn btn-success btn-shift"><span className="glyphicon glyphicon-plus"/> Add</button>*/}
                             </div>
-                            <div className="form-group col-3">
-                                <input type="file" accept=".csv" name="file" onChange={onFileChangeHandler}/>
-                                <button type="button" className="btn btn-primary btn-shift" onClick={onUploadHandler}>Upload</button>
+                           {/* <div className="form-group col-2">
                             </div>
+                            <div className="form-group col-7">
+                                Extra functonality for fun
+                                <button type="button" className="btn btn-success btn-shift"><span className="glyphicon glyphicon-plus"/> Add</button>
+                            </div>*/}
+                            {/*<div className="form-group col-3">
+                            </div>*/}
                         </form>
-                    <div className="col-lg-12">
-                            <table className="table table-hover">
+                    <form className="col-12 center">
+                        <div className="form-group row">
+                            <input type="file" accept=".csv" name="file" onChange={onFileChangeHandler}/>
+                            <button type="button" className="btn btn-primary btn-shift" onClick={onUploadHandler}>Upload</button>
+                        </div>
+                    </form>
+                    <div className="col-12">
+                        <div className="row">
+                            <table className="table table-hover table-responsive w-100 d-block d-md-table">
                                 <thead>
                                     {getHeader()}
                                 </thead>
@@ -314,6 +321,7 @@ function Inventory (props) {
                                     {getRows()}
                                 </tbody>
                             </table>
+                        </div>
                     </div>
                 </div>
             );

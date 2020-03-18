@@ -13,47 +13,90 @@
   }
 }
 
-.navbar-light .navbar-brand,
+
 .navbar-light .navbar-nav .nav-link
+{
+  color: white;
+  font-size: 16px;
+  @media(max-width: 991px){
+    padding: 8px 8px 8px 32px;
+    text-align: left;
+    padding-left: 3.5rem;
+    color: black;
+    background-color: white;
+    &:hover {
+      background-color: #dedede;
+      &::before{
+        background-color: black;
+        width: 5px;
+        height: 40px;
+        position:absolute;
+        content: "";
+        margin-left: -35px;
+        margin-top: -8px
+      }
+    }
+  }
+  @media(min-width: 992px){
+    padding: 8px 8px 8px 32px;
+    text-align: left;
+    padding-left: 1rem;
+    border-radius: 5px;
+    &:hover {
+      background-color: white;
+      color: black;
+      height: 40px;
+    }
+  }
+}
+
+
+.navbar-light .navbar-brand
 {
   background: white;
   color: black;
   @media(min-width: 768px){
     background: red;
     color: #FFFFFF;
+    &:hover{
+      color: #FFFFFF;
+    }
   }
 }
 
 .navbar-light .navbar-brand {
-
+  margin-right: auto;
   padding: 10px 0;
   height: 40px;
 
   @media(max-width: 767px){
-    text-align: center;
-    margin-left: 3rem;
-    font-size: 1.125rem;
+    padding: 8px 0;
+    font-size: 1.7rem;
   }
 
   @media(min-width: 768px){
     font-size: 24px;
     height: calc(67px ~" - 5px");
-    margin-left: 30px;
+    padding: 13px 0 12px 0;
   }
 
   @media(min-width: 992px){
-    margin-left: 10px;
+    margin-right: 10px;
+    margin-left: 30px;
   }
 }
 
 .navbar-light .navbar-toggler-icon {
-  font-size: 1em;
+  font-size: 1.667em;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   margin-top: 0px;
 
   @media(min-width: 768px){
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-    margin-top: 0px;
+  }
+
+  @media(max-width: 767px){
+    font-size: 1em;
   }
 }
 
@@ -61,26 +104,7 @@
   border: none;
 
   @media(min-width: 768px){
-    border-color: white;
+    z-index: 10;
   }
-}
-
-.navbar-brand{
-  height: 40px;
-
-  @media(max-width: 767px){
-    text-align: center;
-    font-size: 1.125rem;
-  }
-
-}
-
-.navbar-text{
-  @media(min-width: 786px) {
-    float: left;
-    margin-right: 15px;
-    margin-left: 15px;
-  }
-  padding: 0;
 }
 
