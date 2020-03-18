@@ -150,7 +150,7 @@ function Inventory (props) {
 
     function matchesFilter(obj, count, item){
         for (var n = 0; n < obj.length; n++) {
-            if (obj[n]["Search"].indexOf(item[obj[n]["Criteria"]]) > -1) {
+            if (obj[n]["Search"].indexOf(item[obj[n]["Criteria"]].toLowerCase()) > -1) {
                 count++;
             }
         }
@@ -176,30 +176,29 @@ function Inventory (props) {
         } else if (!isEmpty(input)){
             if(input.hasOwnProperty('Description')){
                 if(!isEmpty(input.Description)){
-                    searchArray.push({ Criteria: 'Description', Search: [input.Description]})
+                    searchArray.push({ Criteria: 'Description', Search: [input.Description.toLowerCase()]})
                 }
             }
             if(input.hasOwnProperty('ShelfLife')){
                 if(!isEmpty(input.ShelfLife)){
-                    searchArray.push({ Criteria: 'ShelfLife', Search: [input.ShelfLife]})
+                    searchArray.push({ Criteria: 'ShelfLife', Search: [input.ShelfLife.toLowerCase()]})
                 }
             }
             if(input.hasOwnProperty('Department')){
                 if(!isEmpty(input.Department)){
-                    searchArray.push({ Criteria: 'Department', Search: [input.Department]})
+                    searchArray.push({ Criteria: 'Department', Search: [input.Department.toLowerCase()]})
                 }
             }
             if(input.hasOwnProperty('Price')){
                 if(!isEmpty(input.Price)){
-                    searchArray.push({ Criteria: 'Price', Search: [input.Price]})
+                    searchArray.push({ Criteria: 'Price', Search: [input.Price.toLowerCase()]})
                 }
             }
             if(input.hasOwnProperty('Unit')){
                 if(!isEmpty(input.Unit)){
-                    searchArray.push({ Criteria: 'Unit', Search: [input.Unit]})
+                    searchArray.push({ Criteria: 'Unit', Search: [input.Unit.toLowerCase()]})
                 }
             }
-            cleanObject(input);
             console.log(input);
             let filtered = initData.searchFilter(searchArray);
             setData(filtered);
@@ -296,14 +295,6 @@ function Inventory (props) {
                                 <input type="text" placeholder="Unit" className="placement" name="Unit" onChange={onInputChange}/>
                                 <button type="button" className="btn btn-primary btn-shift" onClick={onSearch}><span className="glyphicon glyphicon-search"/> Search</button>
                             </div>
-                           {/* <div className="form-group col-2">
-                            </div>
-                            <div className="form-group col-7">
-                                Extra functonality for fun
-                                <button type="button" className="btn btn-success btn-shift"><span className="glyphicon glyphicon-plus"/> Add</button>
-                            </div>*/}
-                            {/*<div className="form-group col-3">
-                            </div>*/}
                         </form>
                     <form className="col-12 center">
                         <div className="form-group row">
