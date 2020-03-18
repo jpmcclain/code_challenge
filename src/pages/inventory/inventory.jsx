@@ -139,15 +139,6 @@ function Inventory (props) {
         }
     }
 
-    //For removing null fields from search filter
-    function cleanObject(obj){
-        for (let propName in obj) {
-            if (obj[propName] === null || obj[propName] === undefined) {
-                delete obj[propName];
-            }
-        }
-    }
-
     function matchesFilter(obj, count, item){
         for (var n = 0; n < obj.length; n++) {
             if (obj[n]["Search"].indexOf(item[obj[n]["Criteria"]].toLowerCase()) > -1) {
